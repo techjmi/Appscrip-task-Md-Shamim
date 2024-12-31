@@ -1,0 +1,21 @@
+.heading {
+    font-family: "Simplon Norm", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 40px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .common_text {
+    font-family: 'Simplon Norm', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.2px;
+    text-decoration: underline;
+    text-decoration-style: solid;
+    color: #BFC8CD;
+    cursor: pointer;
+  }
+  
+  
