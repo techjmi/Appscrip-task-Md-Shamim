@@ -47,7 +47,7 @@ To run the project locally, follow these steps:
    ```  
 2. Navigate to the project directory:  
    ```bash  
-   cd e-commerce-frontend  
+   cd Appscrip-task-Md-Shamim  
    ```  
 3. Install dependencies:  
    ```bash  
