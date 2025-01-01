@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { FaBars, FaTimes, F} from "react-icons/fa";
+import { FaBars, FaTimes,} from "react-icons/fa";
 import { PiHandbagSimpleLight } from "react-icons/pi";
 import { CiHeart, CiSearch, CiUser } from "react-icons/ci";
 import headlinelogo from "../Assets/nav-top-logo.png";
@@ -7,6 +7,7 @@ import logo from "../Assets/Logo.png";
 import { Badge } from "@mui/material";
 import "../css/Navbar.css";
 import { DataContext } from "../context/Dataprovider";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -67,14 +68,14 @@ const Navbar = () => {
         <span className="website-name">LOGO</span>
 
         <div className="nav-links">
-          <ul>
-            <li><a href="#">SHOP</a></li>
-            <li><a href="#">SKILLS</a></li>
-            <li><a href="#">STORIES</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT US</a></li>
-          </ul>
-        </div>
+  <ul>
+    <li><Link to="/">SHOP</Link></li>
+    <li><Link to="/">SKILLS</Link></li>
+    <li><Link to="/">STORIES</Link></li>
+    <li><Link to="/">ABOUT</Link></li>
+    <li><Link to="/">CONTACT US</Link></li>
+  </ul>
+</div>
       </section>
     </nav>
   );

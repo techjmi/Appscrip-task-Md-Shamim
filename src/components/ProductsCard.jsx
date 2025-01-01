@@ -2,12 +2,12 @@
 import React, { useContext } from "react";
 import "../css/Card.css";
 import { DataContext } from "../context/Dataprovider";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 const ProductsCard = ({ items }) => {
   const { cart, addToCart } = useContext(DataContext);
   const navigate= useNavigate()
-  const { id, title } = items;
+  const { id,  } = items;
   const isItemInCart = cart.find((item) => item.id === id);
 
   const handleAddToCart = () => {
@@ -41,7 +41,7 @@ const ProductsCard = ({ items }) => {
   }
   return (
     <div>
-      <img src={items.image} className="products_image" style={{ width: "100%", cursor:'pointer'}} onClick={()=>handleDetails(items.id)} />
+      <img src={items.image} className="products_image" style={{ width: "100%", cursor:'pointer'}} onClick={()=>handleDetails(items.id)} alt="product_image" />
       <div className="products_details">
         <span className="title">{items.title.split(' ', 2).join(' ')}</span>
         <span className="prod-desc">

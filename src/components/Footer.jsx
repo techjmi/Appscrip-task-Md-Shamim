@@ -15,7 +15,7 @@ import dropdown from "../Assets/arrow-right.png";
 const Footer = () => {
   const [metta, setMetta] = useState(false);
   const [quicklinks, setQuicklinks] = useState(false);
-  const[follow, setFollow]= useState(false)
+  // const[follow, setFollow]= useState(false)
   const [l1class, setL1class] = useState("l1 h75");
   const [l2class, setL2class] = useState("l2 h75");
   const [footerbtmcls, setFooterbtmcls] = useState("footer-bottom");
@@ -102,6 +102,7 @@ const Footer = () => {
                 src={dropdown}
                 className={l2icocls}
                 onClick={handleQuicklinks}
+                alt="link"
               />
             </div>
             {quicklinks ? (
