@@ -39,6 +39,7 @@
   .recommended-dropdown {
     padding: 5px;
     /* outline: none; */
+    cursor: pointer;
     background-color: white;
     outline: none;
   border: none;
@@ -151,8 +152,11 @@
       text-align: center;
       margin: 0 auto;
     }
-    .header-left>p{
+    .mobile-filter-text, .recommend{
       margin-left: 20px;
+      font: bold !important;
+      color: black;
+      font-weight: bold !important;
     }
   
     .both {

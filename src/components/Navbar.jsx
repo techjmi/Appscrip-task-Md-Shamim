@@ -53,9 +53,12 @@ const Navbar = () => {
 
           <div className="nav-utilities">
             <CiSearch  size="26px" className="img search"/>
-            <Badge badgeContent={cart?.length} color="secondary">
+            <Link to='/fav-list'>
+            <Badge  badgeContent={cart?.length} color="secondary">
               <CiHeart size='26px' className="img like"/>
             </Badge>
+            </Link>
+            
             <PiHandbagSimpleLight size="26px" className="img bag"/>
             <CiUser  size="26px"className="img profile"/>
             <select name="languages" id="languages" className="lang">

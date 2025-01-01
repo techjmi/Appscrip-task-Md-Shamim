@@ -106,7 +106,7 @@ function List() {
               )}
             </p>
           </div>
-          <select className="recommended-dropdown heading">
+          <select className="recommended-dropdown heading recommend">
             <option>RECOMENDED</option>
             <option>Newest</option>
             <option>Price: Low to High</option>
