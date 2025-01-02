@@ -17,7 +17,7 @@ const FavPage = () => {
             }
             const data = await response.json();
             console.log(data);
-            cart(data);
+            addToCart(data);
         } catch (error) {
             console.error(error);
         }
