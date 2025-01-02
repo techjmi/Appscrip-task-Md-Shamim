@@ -1,9 +1,8 @@
-
 .sidebar {
   position: fixed;
   top: 0;
   left: -300px; 
-  width: 300px;
+  width: 250px;
   height: 100%;
   background-color: #f8f9fa;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
@@ -76,16 +75,16 @@
 }
 .bottom-nav{
     position: relative;
-    height : 148px;
+    height : 140px;
     border-bottom: 1px solid #F1F1F1;
+    margin-top: 20px !important;
 }
 
 .bottom-nav-utility{
-    margin : 36px 96px;
+    margin: 36px 96px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
 }
 .bottom-nav-utility > * {
   cursor: pointer !important;
@@ -93,7 +92,7 @@
 .bottom-nav-utility .logo, 
 .bottom-nav-utility .nav-utilities,
 .bottom-nav-utility .sidebar {
-  cursor: pointer; /* Ensure pointer on specific interactive elements */
+  cursor: pointer; 
 }
 .website-name{
     font-family: "Inter", sans-serif;
@@ -101,12 +100,15 @@
     letter-spacing: 1px;
     font-weight: 800;
     font-size: 36px;
-    width: 100%;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top:0px
+    margin-left: 220px !important;
+    /* width: 100%; */
+    /* display:flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* text-align: center; */
+    /* position: absolute; */
+    /* top:0px */
+    /* margin: auto; */
   }
   .nav-utilities{
     width: 244px;
@@ -279,7 +281,9 @@ option {
   }
   .website-name {
       font-size: 20px;
-      width: 100%;
+      /* width: 100%; */
+      text-align: center;
+      margin-left: 50px !important;
       z-index: -1;
   }
   .logo > img,

@@ -107,7 +107,7 @@
   }
   
   .product_card {
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
    
     padding: 10px;
     text-align: center;

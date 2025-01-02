@@ -2,7 +2,7 @@
     height: 290px !important;
     width: 320px;
     aspect-ratio: 3/4;
-    background-color: bisque !important;
+    /* background-color: bisque !important; */
 }
 .title{
     font-size: 16px;

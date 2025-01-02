@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SignUp from './components/SignUp';
 import ProductDetails from './components/ProductDetails';
+import ContactUs from './components/ContactUs';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<SignUp />} />
       <Route path='/details/:id' element={<ProductDetails />} />
+      <Route path='/contact' element={<ContactUs />} />
       </Routes>
       <Footer />
       </BrowserRouter>

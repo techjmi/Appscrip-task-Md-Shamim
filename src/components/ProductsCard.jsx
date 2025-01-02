@@ -50,7 +50,7 @@ const ProductsCard = ({ items }) => {
               <span className="" style={{ textDecoration: "underline",  cursor:"pointer"}} onClick={handlesignin}>
                 Sign in
               </span>
-              or Create an account to see pricing
+              &nbsp;or Create an account to see pricing
             </p>
             <i
               className={`fa-regular fa-heart ${isItemInCart ? "red" : ""}`}

@@ -7,12 +7,16 @@ import logo from "../Assets/Logo.png";
 import { Badge } from "@mui/material";
 import "../css/Navbar.css";
 import { DataContext } from "../context/Dataprovider";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate= useNavigate()
   const { cart } = useContext(DataContext);
-
+const HandleHome=()=>{
+  console.log('clicked')
+navigate('/')
+}
   return (
     <nav>
       <section className="top">
@@ -34,23 +38,23 @@ const Navbar = () => {
         <div className="bottom-nav-utility">
           <span className="logo">
             <FaBars className="menu-icon" onClick={() => setMenuOpen(true)} />
-            <img src={logo} alt="logo" />
+            <img src={logo} alt="logo" onClick={HandleHome} style={{cursor:"pointer"}}/>
           </span>
           <aside className={`sidebar ${menuOpen ? "open" : ""}`}>
             <div className="sidebar-header">
-              <span>LOGO</span>
+              <span onClick={HandleHome}>LOGO</span>
               <FaTimes className="close-icon" onClick={() => setMenuOpen(false)} />
             </div>
             <div className="sidebar-links">
-              <div>Sign Up</div>
-              <div>Sign In</div>
-              <div>About</div>
-              <div>Skills</div>
-              <div>Stories</div>
-              <div>Contact Us</div>
-            </div>
+      <div><Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Sign Up</Link></div>
+      <div><Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Sign In</Link></div>
+      <div><Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>About</Link></div>
+      <div><Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Skills</Link></div>
+      <div><Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>Stories</Link></div>
+      <div><Link to="/contact" style={{ textDecoration: 'none', color: 'inherit' }}>Contact Us</Link></div>
+    </div>
           </aside>
-
+          <div className="website-name" onClick={HandleHome}>LOGO</div>
           <div className="nav-utilities">
             <CiSearch  size="26px" className="img search"/>
             <Link to='/fav-list'>
@@ -61,22 +65,20 @@ const Navbar = () => {
             
             <PiHandbagSimpleLight size="26px" className="img bag"/>
             <CiUser  size="26px"className="img profile"/>
-            <select name="languages" id="languages" className="lang">
+            <select name="languages" id="languages" className="lang recommended-dropdown recommend">
               <option value="ENG">ENG</option>
               <option value="ESP">ESP</option>
               <option value="FRA">FRA</option>
             </select>
           </div>
         </div>
-        <span className="website-name">LOGO</span>
-
         <div className="nav-links">
   <ul>
     <li><Link to="/">SHOP</Link></li>
     <li><Link to="/">SKILLS</Link></li>
     <li><Link to="/">STORIES</Link></li>
     <li><Link to="/">ABOUT</Link></li>
-    <li><Link to="/">CONTACT US</Link></li>
+    <li><Link to="/contact">CONTACT US</Link></li>
   </ul>
 </div>
       </section>

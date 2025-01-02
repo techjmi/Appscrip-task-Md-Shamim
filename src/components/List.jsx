@@ -83,6 +83,22 @@ function List() {
       [filterName]: [],
     });
   };
+  const handleSortChange = (e) => {
+    const value = e.target.value;
+  
+    let sortedProducts = [...filteredProducts];
+  
+    if (value === "Price: Low to High") {
+      sortedProducts.sort((a, b) => a.price - b.price);
+    } else if (value === "Price: High to Low") {
+      sortedProducts.sort((a, b) => b.price - a.price);
+    } else if (value === "Newest") {
+      sortedProducts.sort((a, b) => new Date(b.date) - new Date(a.date)); // Assuming `date` field in products
+    }
+  
+    setFilteredProducts(sortedProducts);
+  };
+  
   return (
     <section className="product-section">
       <div className="both">
@@ -106,7 +122,7 @@ function List() {
               )}
             </p>
           </div>
-          <select className="recommended-dropdown heading recommend">
+          <select className="recommended-dropdown heading recommend" onChange={handleSortChange}>
             <option>RECOMENDED</option>
             <option>Newest</option>
             <option>Price: Low to High</option>
@@ -120,7 +136,6 @@ function List() {
           {/* Filter Sidebar */}
           {showFilter && (
             <div className="filter-container">
-              {/* <p>ALL</p> */}
               {[
                 {
                   label: "IDEAL FOR",
